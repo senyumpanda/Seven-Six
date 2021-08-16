@@ -2,7 +2,6 @@
 #include <Windows.h>
 #include <stdlib.h>
 
-HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
 
 void manipulate(int x = 0, int y = 0){
     COORD poin;
@@ -430,6 +429,7 @@ void flag(){
 };
 
 void fontsize(int a, int b){
+      HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
       PCONSOLE_FONT_INFOEX lpConsoleCurrentFontEx = new CONSOLE_FONT_INFOEX();
       lpConsoleCurrentFontEx->cbSize = sizeof(CONSOLE_FONT_INFOEX);
       GetCurrentConsoleFontEx(out, 0, lpConsoleCurrentFontEx);
