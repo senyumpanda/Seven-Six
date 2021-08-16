@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 
-void gotoxy(int x = 0, int y = 0){
+void manipulate(int x = 0, int y = 0){
     COORD poin;
     poin.X = x;
     poin.Y = y;
@@ -21,20 +21,20 @@ void delay(){
 void border(){
     system("color F4");
     for(int i = 0; i < 60; i++){
-        gotoxy(i+8,0);
+        manipulate(i+8,0);
         std::cout << '=';
         delay();
     }
 
     for(int i = 0; i < 60; i++){
-        gotoxy(i+ 8,18);
+        manipulate(i+ 8,18);
         std::cout << '=';
         delay();
     }
 };
 
 void seven(){
-    gotoxy(8, 2);
+    manipulate(8, 2);
     for(int i = 0; i < 20; i++){
         if(i == 0 | i == 1 | i == 2 |i == 19){
             std::cout << ' ';
@@ -47,7 +47,7 @@ void seven(){
     }
     std::cout << std::endl;
 
-    gotoxy(8, 3);
+    manipulate(8, 3);
     for(int i = 0; i < 20; i++){
         if(i == 0 | i == 1 | i == 2 | i == 3 |i == 18 | i == 19){
             std::cout << ' ';
@@ -60,7 +60,7 @@ void seven(){
     }
     std::cout << std::endl;
 
-    gotoxy(8, 4);
+    manipulate(8, 4);
     for(int i = 0; i < 20; i++){
         if(i >= 15 && i <= 16){
             std::cout << '*';
@@ -71,7 +71,7 @@ void seven(){
         }
     }
 
-    gotoxy(8, 5);
+    manipulate(8, 5);
     for(int i = 0; i < 20; i++){
         if(i >= 11 && i <= 15){
             std::cout << '*';
@@ -82,7 +82,7 @@ void seven(){
         }
     }
 
-    gotoxy(8, 6);
+    manipulate(8, 6);
     for(int i = 0; i < 20; i++){
         if(i >= 10 && i <= 14){
             std::cout << '*';
@@ -93,7 +93,7 @@ void seven(){
         }
     }
 
-    gotoxy(8, 7);
+    manipulate(8, 7);
     for(int i = 0; i < 20; i++){
         if(i >= 9 && i <= 13){
             std::cout << '*';
@@ -104,7 +104,7 @@ void seven(){
         }
     }
 
-    gotoxy(8, 8);
+    manipulate(8, 8);
     for(int i = 0; i < 20; i++){
         if(i >= 8 && i <= 12){
             std::cout << '*';
@@ -115,7 +115,7 @@ void seven(){
         }
     }
 
-    gotoxy(8, 9);
+    manipulate(8, 9);
     for(int i = 0; i < 20; i++){
         if(i >= 7 && i <= 11){
             std::cout << '*';
@@ -126,7 +126,7 @@ void seven(){
         }
     }
 
-    gotoxy(8, 10);
+    manipulate(8, 10);
     for(int i = 0; i < 20; i++){
         if(i >= 6 && i <= 10){
             std::cout << '*';
@@ -137,7 +137,7 @@ void seven(){
         }
     }
 
-    gotoxy(8, 11);
+    manipulate(8, 11);
     for(int i = 0; i < 20; i++){
         if(i >= 5 && i <= 7){
             std::cout << '*';
@@ -151,7 +151,7 @@ void seven(){
 };
 
 void six1(){
-    gotoxy(24, 6);
+    manipulate(24, 6);
     for(int i = 0; i < 20; i++){
         if(i > 3 && i < 6){
             std::cout << '*';
@@ -163,7 +163,7 @@ void six1(){
     };
     std::cout << std::endl;
 
-    gotoxy(24, 7);
+    manipulate(24, 7);
     for(int i = 0; i < 10; i++){
         if(i > 2 && i <= 6){
             std::cout << '*';
@@ -176,7 +176,7 @@ void six1(){
     std::cout << std::endl;
 
 
-    gotoxy(24, 8);
+    manipulate(24, 8);
     for(int i = 0; i < 10; i++){
         if(i > 1 && i <= 6){
             std::cout << '*';
@@ -189,7 +189,7 @@ void six1(){
     std::cout << std::endl;
 
 
-    gotoxy(24, 9);
+    manipulate(24, 9);
     for(int i = 0; i < 10; i++){
         if(i > 0 && i <= 5){
             std::cout << '*';
@@ -202,7 +202,7 @@ void six1(){
     std::cout << std::endl;
 
 
-    gotoxy(24, 10);
+    manipulate(24, 10);
     for(int i = 0; i < 10; i++){
         if(i >= 0 && i < 2){
             std::cout << '*';
@@ -217,7 +217,7 @@ void six1(){
 
 void six2(){
 
-    gotoxy(21, 11);
+    manipulate(21, 11);
     for(int i = 0; i < 20; i++){
         if(i > 1 && i < 10){
             std::cout << '*';
@@ -229,9 +229,9 @@ void six2(){
     };
     std::cout << std::endl;
 
-    gotoxy(21, 12);
+    manipulate(21, 12);
     for(int i = 0; i < 20; i++){
-        if(i >= 1 && i < 11){
+        if(i >= 0 && i < 12){
             std::cout << '*';
             delay();
         }else{
@@ -241,19 +241,7 @@ void six2(){
     };
     std::cout << std::endl;
 
-    gotoxy(21, 13);
-    for(int i = 0; i < 20; i++){
-        if((i >= 0 && i < 4) | (i > 7 && i < 12)){
-            std::cout << '*';
-            delay();
-        }else{
-            std::cout << ' ';
-            delay();
-        }
-    };
-    std::cout << std::endl;
-
-    gotoxy(21, 14);
+    manipulate(21, 13);
     for(int i = 0; i < 20; i++){
         if((i >= 0 && i < 4) | (i > 7 && i < 12)){
             std::cout << '*';
@@ -265,9 +253,9 @@ void six2(){
     };
     std::cout << std::endl;
 
-    gotoxy(21, 15);
+    manipulate(21, 14);
     for(int i = 0; i < 20; i++){
-        if(i >= 1 && i < 11){
+        if((i >= 0 && i < 4) | (i > 7 && i < 12)){
             std::cout << '*';
             delay();
         }else{
@@ -277,7 +265,19 @@ void six2(){
     };
     std::cout << std::endl;
 
-    gotoxy(21, 16);
+    manipulate(21, 15);
+    for(int i = 0; i < 20; i++){
+        if(i >= 0 && i < 12){
+            std::cout << '*';
+            delay();
+        }else{
+            std::cout << ' ';
+            delay();
+        }
+    };
+    std::cout << std::endl;
+
+    manipulate(21, 16);
     for(int i = 0; i < 20; i++){
         if(i > 1 && i < 10){
             std::cout << '*';
@@ -293,7 +293,7 @@ void six2(){
 
 void t(){
 
-    gotoxy(28,2);
+    manipulate(28,2);
     for(int i = 0; i < 8; i++){
         if(i > 2 && i < 6){
             std::cout << '*';
@@ -306,7 +306,7 @@ void t(){
     std::cout << std::endl;
 
 
-    gotoxy(28,3);
+    manipulate(28,3);
     for(int i = 0; i < 8; i++){
         if(i == 4){
             std::cout << '*';
@@ -319,7 +319,7 @@ void t(){
     std::cout << std::endl;
 
 
-    gotoxy(28,4);
+    manipulate(28,4);
     for(int i = 0; i < 8; i++){
         if(i == 4){
             std::cout << '*';
@@ -335,7 +335,7 @@ void t(){
 
 void h(){
 
-    gotoxy(36,2);
+    manipulate(36,2);
     for(int i = 0; i < 10; i++){
         if(i == 0 | i == 3){
             std::cout << '*';
@@ -347,7 +347,7 @@ void h(){
     }
     std::cout << std::endl;
 
-    gotoxy(36,3);
+    manipulate(36,3);
     for(int i = 0; i < 10; i++){
         if(i <= 3){
             std::cout << '*';
@@ -359,7 +359,7 @@ void h(){
     }
     std::cout << std::endl;
 
-    gotoxy(36,4);
+    manipulate(36,4);
     for(int i = 0; i < 10; i++){
         if(i == 0 | i == 3){
             std::cout << '*';
@@ -375,28 +375,28 @@ void h(){
 
 void flag(){
 
-    gotoxy(50, 7);
+    manipulate(50, 7);
     for(int i = 0; i < 15; i++){
         std::cout << '*';
         delay();
     }
     std::cout << std::endl;
 
-    gotoxy(50, 8);
+    manipulate(50, 8);
     for(int i = 0; i < 15; i++){
         std::cout << '*';
         delay();
     }
     std::cout << std::endl;
 
-    gotoxy(50, 9);
+    manipulate(50, 9);
     for(int i = 0; i < 15; i++){
         std::cout << '*';
         delay();
     }
     std::cout << std::endl;
 
-    gotoxy(50, 10);
+    manipulate(50, 10);
     for(int i = 0; i < 15; i++){
         if(i == 0 | i == 14){
             std::cout << '*';
@@ -408,7 +408,7 @@ void flag(){
     }
     std::cout << std::endl;
 
-    gotoxy(50, 11);
+    manipulate(50, 11);
     for(int i = 0; i < 15; i++){
         if(i == 0 | i == 14){
             std::cout << '*';
@@ -420,7 +420,7 @@ void flag(){
     }
     std::cout << std::endl;
 
-    gotoxy(50, 12);
+    manipulate(50, 12);
     for(int i = 0; i < 15; i++){
         std::cout << '*';
         delay();
@@ -451,7 +451,7 @@ int main(){
 
     std::cout << "\n\n\n\n\n\n\n";
 
-    gotoxy(20, 20);
+    manipulate(20, 20);
     std::string kata1 = "INDONESIA TANGGUH INDONESIA TUMBUH";
     std::string kata2 = "Visit my GitHub: @senyumpanda";
 
@@ -461,10 +461,10 @@ int main(){
     }
     std::cout << std::endl;
 
-    gotoxy(35, 21);
+    manipulate(35, 21);
     std::cout << "***" << std::endl;
 
-    gotoxy(22, 22);
+    manipulate(22, 22);
     for(int i = 0; i < kata2.size(); i++){
         delay();
         std::cout << kata2[i];
