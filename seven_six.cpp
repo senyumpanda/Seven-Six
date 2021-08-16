@@ -2,6 +2,8 @@
 #include <Windows.h>
 #include <stdlib.h>
 
+HANDLE out = GetStdHandle(STD_OUTPUT_HANDLE);
+
 void manipulate(int x = 0, int y = 0){
     COORD poin;
     poin.X = x;
@@ -116,7 +118,7 @@ void seven(){
 
     manipulate(8, 9);
     for(int i = 0; i < 20; i++){
-        if(i >= 7 && i <= 10){
+        if(i >= 7 && i <= 11){
             std::cout << '*';
             delay();
         }else{
@@ -127,7 +129,7 @@ void seven(){
 
     manipulate(8, 10);
     for(int i = 0; i < 20; i++){
-        if(i >= 6 && i <= 9){
+        if(i >= 6 && i <= 10){
             std::cout << '*';
             delay();
         }else{
@@ -427,8 +429,18 @@ void flag(){
     std::cout << std::endl;
 };
 
+void fontsize(int a, int b){
+      PCONSOLE_FONT_INFOEX lpConsoleCurrentFontEx = new CONSOLE_FONT_INFOEX();
+      lpConsoleCurrentFontEx->cbSize = sizeof(CONSOLE_FONT_INFOEX);
+      GetCurrentConsoleFontEx(out, 0, lpConsoleCurrentFontEx);
+      lpConsoleCurrentFontEx->dwFontSize.X = a;
+      lpConsoleCurrentFontEx->dwFontSize.Y = b;
+      SetCurrentConsoleFontEx(out, 0, lpConsoleCurrentFontEx);
+ };
+
 int main(){
 
+    fontsize(25, 25);
     border();
     seven();
     six1();
@@ -438,15 +450,26 @@ int main(){
     flag();
 
     std::cout << "\n\n\n\n\n\n\n";
+
     manipulate(20, 20);
-    std::string kata = "Source Code on my GitHub: @senyumpanda";
-    for(int i = 0; i < kata.size(); i++){
+    std::string kata1 = "INDONESIA TANGGUH INDONESIA TUMBUH";
+    std::string kata2 = "Visit my GitHub: @senyumpanda";
+
+    for(int i = 0; i < kata1.size(); i++){
         delay();
-        std::cout << kata[i];
+        std::cout << kata1[i];
     }
     std::cout << std::endl;
+
     manipulate(35, 21);
     std::cout << "***" << std::endl;
-    
-  return 0;
+
+    manipulate(22, 22);
+    for(int i = 0; i < kata2.size(); i++){
+        delay();
+        std::cout << kata2[i];
+    }
+    std::cout << std::endl;
+
+    std::cin.get();
 }
