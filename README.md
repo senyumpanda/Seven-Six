@@ -1,5 +1,6 @@
 # Seven-Six
 
-Kode Ini Saya Dedikasikan untuk Bangsaku Indonesia yang telah berumur 76 Tahun.
+Happy Indenpendence Days Indonesia to 76 Years 
 
-Selamat Ulang Tahun Indonesia.
+"INDONESIA TANGGUH - INDONESIA TUMBUH"
+
