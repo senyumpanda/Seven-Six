@@ -1,6 +1,7 @@
 #include <iostream>
 #include <Windows.h>
 #include <stdlib.h>
+#include <string>
 
 
 void manipulate(int x = 0, int y = 0){
